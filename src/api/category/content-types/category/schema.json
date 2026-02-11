@@ -1,27 +1,24 @@
 {
   "kind": "collectionType",
-  "collectionName": "restaurants",
+  "collectionName": "categories",
   "info": {
-    "singularName": "restaurant",
-    "pluralName": "restaurants",
-    "displayName": "Restaurant"
+    "singularName": "category",
+    "pluralName": "categories",
+    "displayName": "Category"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
+    "name": {
+      "type": "string"
+    },
     "menu_item": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::menu-item.menu-item",
-      "mappedBy": "restaurant"
-    },
-    "name": {
-      "type": "string"
-    },
-    "description": {
-      "type": "blocks"
+      "inversedBy": "category"
     }
   }
 }
