@@ -19,6 +19,15 @@
       "relation": "oneToOne",
       "target": "api::menu-item.menu-item",
       "inversedBy": "category"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "categories"
     }
   }
 }
